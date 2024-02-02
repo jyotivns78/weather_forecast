@@ -40,11 +40,17 @@ const Home = () => {
 
   return (
       <>
-      <section className='Home_section col-10 py-5'>
+      <section className='Home_section col-11 py-5'>
        
       <Search onSearchChange={handleOnSearchChange} />
-    { currentWeather && <CurrentWeather data={currentWeather} />}
-    { foreCast &&  <Forecast data={foreCast} />}
+      <div className='full_flex_div d-flex'>
+      <div className='col-4 p-2'>
+      { currentWeather && <CurrentWeather data={currentWeather} />}
+      </div>
+       <div className='col-8 p-2'>
+       { foreCast &&  <Forecast data={foreCast} />}
+       </div>
+      </div>
       </section>
       </>
   )
